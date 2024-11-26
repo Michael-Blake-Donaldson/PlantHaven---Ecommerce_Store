@@ -1,0 +1,47 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Haven | Your Online Plant Paradise</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" href="./styles/home.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="logo">🪴 Plant Haven</div>
+      <div class="nav-links">
+        <a href="/cart.html">Cart (0)</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="filters glass-effect">
+    <input type="text" class="filter-input" id="nameFilter" placeholder="Search by name">
+    <select class="filter-input" id="regionFilter">
+      <option value="">All Regions</option>
+      <option value="tropical">Tropical</option>
+      <option value="mediterranean">Mediterranean</option>
+      <option value="temperate">Temperate</option>
+    </select>
+    <select class="filter-input" id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="indoor">Indoor</option>
+      <option value="outdoor">Outdoor</option>
+      <option value="rare">Rare Finds</option>
+    </select>
+    <select class="filter-input" id="difficultyFilter">
+      <option value="">All Difficulty Levels</option>
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+  </div>
+
+  <div class="plants-grid" id="plantsContainer">
+    <!-- Plants will be dynamically inserted here -->
+  </div>
+  
+</body>
+
+<script src="./javascript/home.js"></script>
+</html>

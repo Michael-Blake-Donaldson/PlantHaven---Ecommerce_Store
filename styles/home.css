@@ -1,0 +1,163 @@
+:root {
+    --primary: #2b2d42;
+    --secondary: #8d99ae;
+    --accent: #edf2f4;
+    --light: #ffffff;
+    --dark: #1a1a1a;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #f6f8fd 0%, #f1f4f9 100%);
+    min-height: 100vh;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+  
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .navbar-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--secondary);
+  }
+  
+  .filters {
+    margin: 100px auto 20px;
+    max-width: 1400px;
+    padding: 2rem;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+  }
+  
+  .filter-input {
+    padding: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .plants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .plant-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+  }
+  
+  .plant-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .plant-image {
+    height: 250px;
+    width: 100%;
+    background-size: contain; /* Change from cover to contain */
+    background-repeat: no-repeat; /* Ensure no tiling of images */
+    background-position: center; /* Center the image */
+  }
+  
+  .plant-content {
+    padding: 1.5rem;
+  }
+  
+  .plant-title {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .plant-details {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .difficulty {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .easy { background: #a8e6cf; }
+  .medium { background: #ffd3b6; }
+  .hard { background: #ffaaa5; }
+  
+  .buy-button {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+  }
+  
+  .buy-button:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+  }
