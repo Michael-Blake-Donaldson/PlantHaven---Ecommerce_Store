@@ -99,3 +99,16 @@ function updateCartCount() {
   const cartLink = document.querySelector('.nav-links a');
   cartLink.textContent = `Cart (${cart.length})`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser')); // Retrieve logged-in user from session storage
+
+    if (loggedInUser) {
+        // Display welcome message if user is logged in
+        navLinks.innerHTML += `<span>Welcome, ${loggedInUser.name}</span>`;
+    } else {
+        // Display login link if user is not logged in
+        navLinks.innerHTML += `<a href="login.html">Log In</a>`;
+    }
+});

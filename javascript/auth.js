@@ -22,21 +22,23 @@ document.getElementById('signupForm')?.addEventListener('submit', function (e) {
     window.location.href = 'login.html';
 });
 
-// Log In
 document.getElementById('loginForm')?.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
+    const users = JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find(user => user.email === email && user.password === password);
+
     if (!user) {
         alert('Invalid email or password!');
         return;
     }
 
-    // Save logged-in user to session
+    // Save logged-in user to sessionStorage
     sessionStorage.setItem('loggedInUser', JSON.stringify(user));
-    alert(`Welcome, ${user.name}!`);
-    window.location.href = 'cart.html';
+    alert(`Welcome back, ${user.name}!`);
+    window.location.href = './cart.html'; // Redirect to the cart page
 });
+
